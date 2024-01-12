@@ -1,5 +1,13 @@
-import Image from "next/image";
+"use client";
+import HeaderEcommerce from "@/components/header/HeaderEcommerce/HeaderEcommerce";
+import HeaderMain from "@/components/header/HeaderMain/HeaderMain";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Home() {
-  return <>hi</>;
+  return (
+    <>
+      {" "}
+      <div>setItem</div>
+    </>
+  );
 }
