@@ -5,3 +5,5 @@ const store = configureStore({
 });
 
 export default store;
+
+// need to add this to provider and app

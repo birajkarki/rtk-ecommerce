@@ -6,8 +6,7 @@ import { useAuth } from "@/context/AuthContext";
 export default function Home() {
   return (
     <>
-      {" "}
-      <div>setItem</div>
+      <div>{setItem}</div>
     </>
   );
 }
