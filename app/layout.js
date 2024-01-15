@@ -1,23 +1,27 @@
-"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Providers } from "@/redux/storeProvider";
 
 import { AuthProvider, useAuth } from "@/context/AuthContext";
 import HeaderEcommerce from "@/components/header/HeaderEcommerce/HeaderEcommerce";
-import HeaderMain from "@/components/header/HeaderMain/HeaderMain";
+import { Providers } from "@/redux/providers";
+// import HeaderMain from "@/components/header/HeaderMain/HeaderMain";
 
+export const metadata = {
+  title: "Hajir's Next.js App",
+  description: "A smart attadance system ",
+};
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
-  const { isAuthenticated } = useAuth();
+  // const { isAuthenticated } = useAuth();
 
   return (
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
           <Providers>
-            {isAuthenticated ? <HeaderEcommerce /> : <HeaderMain />}
+            {/* {isAuthenticated ? <HeaderEcommerce /> : <HeaderMain />} */}
+            <HeaderEcommerce />
             {children}
           </Providers>
         </AuthProvider>
